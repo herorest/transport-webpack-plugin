@@ -1,5 +1,6 @@
 
-## 这是一款针对webpack的像素转vw单位的loader插件
+## 这是一款将指定目录文件复制到目标目录的插件
+由于项目需要将打包后的文件复制到某目录，但在使用transfer-webpack-plugin及copy-webpack-plugin两款插件后，无一例外均在95%阶段报错，而这两款插件都是基于webpack的emit阶段中compilation.assets制作的，所以决定本插件单纯使用node来进行复制，在after-emit阶段触发，需要的朋友拿去使用。
 
 ### 安装：
 ```javascript
@@ -8,7 +9,6 @@ npm i transport-webpack-plugin
 
 
 ### 配置：
-按以下loader格式，添加进入webpack配置文件，实现从px转换成vw，适用于移动端项目
 ```javascript
 const TransportWebpackPlugin = require('transport-webpack-plugin');
 

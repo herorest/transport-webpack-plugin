@@ -4,6 +4,7 @@ const rimraf = require('rimraf')
 const fs = require('fs');
 const copy = require('./copy');
 
+/*定义传输类*/
 function TransportWebpackPlugin(patterns, options) {
   this.patterns = patterns || [];
   this.options = options;
